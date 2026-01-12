@@ -2,31 +2,40 @@ import SwiftUI
 
 struct HabitTracker: View {
     
-    @State private var count = 0
     
     var body: some View {
-        VStack(spacing: 20) {
-            
-            Text("Hello, SwiftUI 👋")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            Text("Button clicked: \(count) times")
-                .font(.headline)
-            
-            Button("Click Me") {
-                count += 1
+        VStack {
+            HStack{
+                VStack(alignment: .leading){
+                    Text("Yesterday")
+//                        .font(.headline)
+                        .font(.system(size: 24, weight: .bold))
+                        
+                    Text("100% Finished")
+                        .font(.subheadline)
+                        .foregroundColor(.green)
+                }
+                Spacer()
+                Button {
+                    print("Add tapped")
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .clipShape(Circle())
+                }
+
             }
             .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
+            Spacer()
+            
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    HabitTracker()
 }
 
