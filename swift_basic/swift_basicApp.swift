@@ -1,9 +1,4 @@
-//
-//  swift_basicApp.swift
-//  swift_basic
-//
-//  Created by TOMA on 11/1/26.
-//
+
 
 import SwiftUI
 

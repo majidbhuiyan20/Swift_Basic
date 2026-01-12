@@ -5,6 +5,7 @@ struct ContentView: View {
     @State private var count = 0
     @State private var navigate = false
     @State private var navigateThird = false
+    @State private var navigateHabitTracker = false
 
     var body: some View {
         NavigationStack { // 👈 Add this for navigation
@@ -55,6 +56,33 @@ struct ContentView: View {
                                     .cornerRadius(10)
                             }
                         }
+                        
+                        //Habit Tracker Button add here
+                        NavigationStack {
+                            NavigationLink(destination: HabitTracker()) {
+                                Text("Habit Tracker App")
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                           .padding()
+                        }
+                        
+                        
+                        NavigationStack{
+                            NavigationLink(destination: HabitTracker()){
+                                Text("Habit Tracker")
+                                    .padding()
+                                    .background(Color.green)
+                                    .foregroundColor(Color.white)
+                                    .frame(maxWidth: .infinity)
+                                    .cornerRadius(10)
+                            }
+                            .padding()
+                        }
+
                         
                         // Navigation Button
                         Button(action: {
