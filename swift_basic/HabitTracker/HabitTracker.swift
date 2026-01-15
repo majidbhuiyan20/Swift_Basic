@@ -89,7 +89,7 @@ struct HabitTracker: View {
                         
                         //Mark: Dates of Current Month
                         ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 25){
+                            HStack(spacing: 10){
                                 ForEach(currentMonthDates.indices, id: \.self){
                                     index in let day = currentMonthDates[index]
                                     Text("\(day)")
@@ -106,19 +106,29 @@ struct HabitTracker: View {
                             }
                         }
                         
-                        HStack(spacing: 10){
-                            ForEach (days.indices, id:\.self){
-                                index in VStack{
-                                    Text(days[index])
-                                        .foregroundColor(selectedDayIndex == index ? .white :.gray)
-                                        .fontWeight(.medium)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 16) {
+                                ForEach(currentMonthDates.indices, id: \.self) { index in
+                                    let date = currentMonthDates[index]
                                     
-                                    let date = currentWeekDates[index]
                                     Text("\(date)")
-                                        .foregroundColor(selectedDayIndex == index ? Color.blue: Color.clear)
+                                        .font(.system(size: 16, weight: .medium))
+                                        .foregroundColor(selectedDayIndex == index ? .white : .gray)
+                                        .frame(width: 40, height: 40)
+                                        .background(
+                                            Circle()
+                                                .fill(selectedDayIndex == index ? Color.blue : Color.clear)
+                                        )
+                                        .onTapGesture {
+                                            selectedDayIndex = index
+                                        }
                                 }
+                                
                             }
+                            .padding(.horizontal)
                         }
+
+
                         
                         
                         Spacer()

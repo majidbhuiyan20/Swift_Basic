@@ -82,7 +82,20 @@ struct ContentView: View {
                             }
                             .padding()
                         }
-
+                        //Fetch Users Data from json placeholder api
+                        NavigationStack{
+                            NavigationLink(destination: UsersScreen()){
+                                Text("User Data Api")
+                                    .padding()
+                                    .background(Color.green)
+                                    .foregroundColor(Color.white)
+                                    .frame(maxWidth:.infinity)
+                                    .cornerRadius(10)
+                                
+                            }.padding()
+                            
+                            
+                        }
                         
                         // Navigation Button
                         Button(action: {
