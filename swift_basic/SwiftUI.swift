@@ -34,7 +34,49 @@ struct SwiftUIScreen: View {
             .frame(maxWidth: .infinity, maxHeight: 70, alignment: .leading)
             .background(.blue)
             
+            // AppBar Creation Done
             
+            
+            HStack{
+                //Progress stack
+                VStack{
+                    Text("Progress")
+                        .font(.title2)
+                        .bold()
+                    
+                    ZStack{
+                        Circle()
+                            .stroke(Color.gray.opacity(0.3),lineWidth: 12)
+                        
+                        Circle()
+                            .trim(from: 0.0, to: 0.7)
+                            .stroke(Color.blue, lineWidth: 12)
+                            .rotationEffect(.degrees(-90))
+                            .animation(.easeInOut, value: 0.7)
+                        
+                        Text("70%")
+                            .font(.title2)
+                            .bold()
+                    }.frame(width: 120, height: 120)
+                }.padding(.vertical, 20)
+                    .padding(.horizontal, 40)
+
+                    .background(.white)
+                    .cornerRadius(12)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.white, lineWidth: 2)
+                    ).shadow(color: Color.gray.opacity(0.3), radius: 8, x: 0, y: 4)
+             
+                
+                
+                
+                Spacer()
+                // Time and calories stack
+                VStack{
+                    
+                }
+            }.padding()
             
             Spacer()
         }
