@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SwiftUIScreen: View {
+    let imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRTw4l43rtDoc4oTRF1PS_eiWkSjxrlmhpQ&s"
     var body: some View {
         VStack(){
             
@@ -36,9 +37,45 @@ struct SwiftUIScreen: View {
             
             // AppBar Creation Done
             
+            ZStack(alignment: .bottomLeading){
+                AsyncImage(url: URL(string: imageUrl)){
+                    phase in if let image = phase.image{
+                        image.resizable()
+                            .scaledToFill()
+                    }
+                    else{
+                        Color.gray.opacity(0.3)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: 200)
+                .clipped()
+                .cornerRadius(16)
+                .overlay(
+                    LinearGradient(
+                        gradient: Gradient(colors: [.black.opacity(0.2), .clear]),
+                        startPoint: .center,
+                        endPoint: .top
+                    )
+                    .cornerRadius(16)
+                )
+                
+                VStack(alignment:.leading){
+                    Text("BODY COMBAT")
+                        .font(.system(size: 32))
+                        .bold()
+                        .foregroundColor(.white)
+                    Text("Beginner * 8-16 mins per day")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                }.padding()
+
+                
+                
+            }.padding(.horizontal, 16)
+
+               
             
             HStack{
-                //Progress stack
                 VStack{
                     Text("Progress")
                         .font(.title2)
@@ -96,7 +133,7 @@ struct SwiftUIScreen: View {
                 
             
             Spacer()
-        }
+        }.navigationBarBackButtonHidden(true)
         
     
     }
