@@ -57,9 +57,9 @@ struct SwiftUIScreen: View {
                         Text("70%")
                             .font(.title2)
                             .bold()
-                    }.frame(width: 120, height: 120)
+                    }.frame(width: 100, height: 100)
                 }.padding(.vertical, 20)
-                    .padding(.horizontal, 40)
+                    .padding(.horizontal, 30)
 
                     .background(.white)
                     .cornerRadius(12)
@@ -73,10 +73,27 @@ struct SwiftUIScreen: View {
                 
                 Spacer()
                 // Time and calories stack
-                VStack{
+                VStack(spacing:26){
+                    CustomCard(
+                        iconName: "alarm",
+                        title: "Total Time",
+                        time: "20 Min",
+                        iconBgColor: .blue,
+                        iconColor: .blue
+                    )
+                    
+                    CustomCard(
+                        iconName: "flame.fill",
+                        title: "Calories",
+                        time: "150 kcal",
+                        iconBgColor: .red,
+                        iconColor: .red
+                    )
+
                     
                 }
             }.padding()
+                
             
             Spacer()
         }
