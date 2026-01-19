@@ -226,11 +226,8 @@ struct SwiftUIScreen: View {
                         Image(systemName: "gearshape.fill")
                         Text("Settings")
                     }
-                SecondView()
-                    .tabItem {
-                        Image(systemName: "gearshape.fill")
-                        Text("Settings")
-                    }
+                
+               
             }
 
         }.navigationBarBackButtonHidden(true)
