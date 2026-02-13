@@ -269,3 +269,247 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
+/**
+ 
+ 1️⃣ SwiftUI Core UI Development
+
+ Views & View Composition
+
+ Layout System (VStack, HStack, ZStack, GeometryReader)
+
+ Custom Reusable Components
+
+ Modifiers & Custom Modifiers
+
+ NavigationStack & NavigationPath
+
+ List & LazyVStack Optimization
+
+ Form & Input Controls
+
+ Sheet, FullScreenCover
+
+ Alert & ConfirmationDialog
+
+ Dark Mode Support
+
+ Dynamic Type Support (Accessibility)
+
+ Safe Area Handling
+
+ Toolbar & TabView
+
+ Custom Tab Bar
+
+ Animations & Transitions
+
+ MatchedGeometryEffect
+
+ SF Symbols Usage
+
+ 🧠 2️⃣ State Management & Data Flow
+
+ @State
+
+ @Binding
+
+ @StateObject
+
+ @ObservedObject
+
+ @EnvironmentObject
+
+ @Published
+
+ ObservableObject
+
+ Data Flow in SwiftUI
+
+ Two-way Binding
+
+ View Lifecycle in SwiftUI
+
+ MainActor
+
+ AppStorage
+
+ SceneStorage
+
+ 🏗 3️⃣ Architecture & Code Structure
+
+ MVVM Architecture
+
+ Clean Architecture (Basic)
+
+ Dependency Injection
+
+ Repository Pattern
+
+ Service Layer Design
+
+ Modular Folder Structure
+
+ Separation of Concerns
+
+ Reusable Networking Layer
+
+ 🌐 4️⃣ Networking & API Integration
+
+ URLSession
+
+ Async/Await
+
+ Generic NetworkManager
+
+ Codable & JSON Decoding
+
+ Error Handling Strategy
+
+ HTTP Methods (GET, POST, PUT, DELETE)
+
+ Token-based Authentication
+
+ Authorization Header Injection
+
+ Refresh Token Flow
+
+ API Response Wrapper (Generic Model)
+
+ Multipart Upload
+
+ Image Upload API
+
+ Pagination Handling
+
+ 💾 5️⃣ Local Data & Persistence
+
+ UserDefaults
+
+ Keychain (Secure Token Storage)
+
+ FileManager
+
+ Local JSON Loading
+
+ CoreData (Basic to Intermediate)
+
+ SwiftData (iOS 17+)
+
+ Offline Caching Strategy
+
+ 🔐 6️⃣ Authentication & Security
+
+ Login / Register Flow
+
+ JWT Token Handling
+
+ Keychain Storage
+
+ Biometric Authentication (Face ID / Touch ID)
+
+ Secure API Calls
+
+ Logout Flow
+
+ Auto Logout on 401
+
+ ⚡ 7️⃣ Concurrency & Performance
+
+ async / await
+
+ Task
+
+ TaskGroup
+
+ async let
+
+ MainActor
+
+ Structured Concurrency
+
+ Background Tasks
+
+ Memory Management
+
+ Lazy Loading
+
+ Image Caching
+
+ Performance Optimization
+
+ 🎨 8️⃣ UI/UX Professional Topics
+
+ Responsive Layout
+
+ Adaptive Layout (iPhone / iPad)
+
+ Accessibility (VoiceOver)
+
+ Animations & Microinteractions
+
+ Skeleton Loading
+
+ Shimmer Effect
+
+ Empty State Design
+
+ Error State UI
+
+ Pull to Refresh
+
+ Swipe Actions
+
+ 📦 9️⃣ Advanced iOS Features
+
+ Push Notifications
+
+ Deep Linking
+
+ App Lifecycle Management
+
+ Background Modes
+
+ Widgets
+
+ Share Extension
+
+ App Clips
+
+ Universal Links
+
+ 🧪 🔟 Testing & Debugging
+
+ Unit Testing
+
+ UI Testing
+
+ Debugging Tools
+
+ Instruments
+
+ Memory Leak Detection
+
+ Logging System Design
+
+ 🚀 1️⃣1️⃣ Deployment & Production
+
+ App Signing
+
+ Certificates & Provisioning Profiles
+
+ TestFlight
+
+ App Store Submission
+
+ App Versioning
+
+ Build Configurations (Dev / Prod)
+
+ Environment Handling
+
+ CI/CD (Basic)
+
+
+ */
