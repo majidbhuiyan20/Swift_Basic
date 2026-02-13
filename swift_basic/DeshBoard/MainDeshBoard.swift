@@ -79,22 +79,6 @@ struct TopicCard: View {
     }
 }
 
-
-struct SwiftFundamentalsView: View {
-    var body: some View {
-        VStack {
-            Text("Swift Fundamentals")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Text("Variables, Constants, Data Types...")
-                .padding()
-            Spacer()
-        }
-        .padding()
-        .navigationTitle("Swift Fundamentals")
-    }
-}
-
 struct SwiftUIView: View {
     var body: some View {
         VStack {
